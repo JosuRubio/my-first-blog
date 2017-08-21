@@ -9,7 +9,15 @@
 
     <div>
       <h2><a href="">My first Post</a></h2>
-      <p><a href="https://www.youtube.com/watch?v=V5koLlk6zF0">Siempre que tú quieras</a></p>
+      <iframe width="200" height="150" src="https://www.youtube.com/embed/V5koLlk6zF0" frameborder="0" allowfullscreen></iframe>
       <p>Este es un video de prueba</p>
+      <ul>
+        {% for post in posts %}
+        <li><h3>{{post.title}}</h3></li>
+        <ul>
+          <li>{{post.text}}</li>
+        </ul>
+        {% endfor %}
+      </ul>
     </div>
-  </body>
+</html>
